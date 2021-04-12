@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <head>
+
+        
+        <style>
+    *{ padding: 0; margin: 0; box-sizing: border-box; font-family: 'Crimson Text', serif;}
+   .mainDiv{
+       width: 100%;
+       height: 100vh;
+       position: relative;
+       background-color: #3498db;
+   }
+   .centreDiv{
+       position: absolute;
+       top:40%;
+       left:50%;
+       transform: translate(-50%,-50%);
+        text-align: center;
+   }
+   .mainbtn{
+      
+       width: 39%;
+       text-align: center;
+       padding: 10px 20px;
+       border-radius: 20px;
+       border: 5px solid #2980b9;
+       background: #ecf0f1;
+       font-size: 1rem;
+   }
+        </style>
+
+    </head>
+    <body>
+    <div class="mainDiv">
+      <div class="centreDiv">
+        <p>Enter element to push in Array: </p><input  id="op">
+        <br>
+        <button class="mainbtn" onclick="fun1()">Push</button>
+        <p>Array numer sort: </p>
+        <p id="dis"></p>
+        <p>Array string sort:: </p>
+        <p id="dis1"></p>
+       </div>
+    </div>
+    
+ <script>
+   $( function() {
+    $( "#draggable" ).draggable();
+        } );
+
+
+    var arr1 = ["Anjani", "saurav"];
+     var arr2 = [];
+     var arr3 = [];
+     var arr4 = [];
+     var arr5 = [];
+     var arr6 = [];
+
+    function fun1(){
+                var value = document.getElementById("op").value;
+                console.log(value);
+                // console.log(arr1);
+                // console.log(arr2);
+                // var x = 3;
+                // var y = "ty";
+                // console.log(typeof x)
+                // console.log(typeof y)
+                // arr1.push(value);
+                // document.getElementById("dis").innerHTML = arr1;
+
+                // console.log(arr1);
+                // arr2 = arr1.sort();
+                // console.log(arr2);
+                // document.getElementById("dis1").innerHTML = arr2;
+
+                var patt = new RegExp('^[0-9]+$');
+
+                if(patt.test(value)){
+                    console.log("Contains numbers")
+                    arr3.push(value);
+                    arr3 = arr3.sort();
+                    console.log(arr3);
+                    
+
+                }
+                else{
+                    console.log("contains string")
+                    arr4.push(value);
+                    arr4 = arr4.sort();
+                    
+
+
+
+                }
+                document.getElementById("dis").innerHTML = arr3;
+                document.getElementById("dis1").innerHTML = arr4;
+            
+            }
+        </script>
+
+    </body>
+</html>
