@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p id="str">your string is: </p>
+<button onclick="fun1()">str</button>
+<p id="demo"></p>
+<p id="inp"></p>
+<!-- <p ></p> -->
+
+
+<!-- <button onclick="fun()">str-len</button> -->
+
+
+
+<script>
+// function fun() {
+//   var v = "myself saurav from patna bihar";
+//   var n = v.length;
+//   document.getElementById("demo").innerHTML = n;
+  
+
+// }
+function fun1(){
+    var str = "myself saurav from patna bihar";
+    var n = str.length;
+    var i =str.indexOf("saurav");
+    document.getElementById("str").innerHTML = "your string=>"+str ;
+    document.getElementById("demo").innerHTML = "string lenth is=>"+n;
+    document.getElementById("inp").innerHTML = "string saurav at:=>"+i;
+
+}
+</script>
+
+</body>
+</html>
